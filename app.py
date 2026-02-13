@@ -9,6 +9,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 st.title("Heart Disease Prediction App")
+st.caption("Developed by Ganesh G – 2025AA05882")
+st.markdown("---")
 
 # Upload CSV
 uploaded_file = st.file_uploader("Upload Test CSV", type=["csv"])
