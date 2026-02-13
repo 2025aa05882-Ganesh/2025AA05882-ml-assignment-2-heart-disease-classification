@@ -43,22 +43,46 @@ The following six classification algorithms were implemented:
 
 ---
 
-## Observations
+## Observations on Model Performance
 
-### Logistic Regression
-Logistic Regression provided a good baseline performance with a reasonable balance between precision and recall. However, it may not capture complex non-linear patterns as effectively as ensemble methods.
+| ML Model Name | Observation about model performance |
+|--------------|--------------------------------------|
+| Logistic Regression | Provided a strong baseline with balanced precision and recall but was limited in capturing complex patterns. |
+| Decision Tree | Achieved very high performance by learning non-linear rules, though there is a risk of overfitting. |
+| kNN | Produced comparatively lower results and is sensitive to distance calculations and feature scaling. |
+| Naive Bayes | Worked efficiently despite independence assumptions but slightly lagged behind ensemble approaches. |
+| Random Forest (Ensemble) | Among the best performers; averaging across trees improved stability and generalization. |
+| XGBoost (Ensemble) | Delivered excellent accuracy and AUC, benefiting from iterative error correction during boosting. |
 
-### Decision Tree
-Decision Tree achieved very high accuracy and MCC. It is strong in learning non-linear decision boundaries but may sometimes overfit.
+---
 
-### kNN
-kNN showed comparatively lower performance. The algorithm depends heavily on distance measures and may not capture deeper feature relationships.
+## Streamlit Application
+The trained models were deployed using Streamlit, where users can:
 
-### Naive Bayes
-Naive Bayes performed fairly well despite assuming feature independence. It is efficient but slightly behind tree-based ensemble models.
+- Upload a test CSV file  
+- Select a trained model  
+- Generate predictions  
+- View evaluation metrics  
+- Visualize the confusion matrix  
 
-### Random Forest
-Random Forest delivered one of the best performances across all metrics. Combining multiple trees helped improve robustness and reduce overfitting.
+---
 
-### XGBoost
-XGBoost also achieved excellent results with high accuracy and AUC. Its boosting mechanism improves predictions iteratively, making it highly effective.
+## Repository Structure
+```
+├── app.py
+├── requirements.txt
+├── models/
+│   ├── Logistic Regression.pkl
+│   ├── Decision Tree.pkl
+│   ├── kNN.pkl
+│   ├── Naive Bayes.pkl
+│   ├── Random Forest.pkl
+│   └── XGBoost.pkl
+└── README.md
+```
+
+---
+
+## Author
+Ganesh G
+2025AA05882
